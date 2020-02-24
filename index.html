@@ -49,6 +49,9 @@
 methods:{
 remove(i){
     this.todos.splice(i, 1);
+  },
+  add(){
+    this.todos.push({text: this.newTodo})
   }
 }
 })
