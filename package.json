@@ -1,0 +1,26 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "![](pavani.jpg)  \r # My name is pavani gorlagunta. I am from India. I did my bachelor’s in computer science and I learned java, c language, programming skills, database, and many other subjects which was very interesting. And now I am currently pursuing masters in suny new paltz. In my leisure time I usually like to watch tv, reading books, playing games, surfing internet. One of the funniest parts about me is that i love travelling a lot. My favourite website is amazon, and Netflix.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorlagup1/what-to-do-inclss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gorlagup1/what-to-do-inclss/issues"
+  },
+  "homepage": "https://github.com/gorlagup1/what-to-do-inclss#readme"
+}
