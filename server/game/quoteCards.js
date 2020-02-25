@@ -3,4 +3,4 @@ const quoteCards = [
     "Come to shabbat 200"
 ];
 
-module.exports= quoteCards; 
+module.exports= quoteCards;  
