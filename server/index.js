@@ -8,7 +8,7 @@ app
     .get('/game/quoteCards', (req, res) => res.send(quoteCards) );
 
 
-app.listen(port, () => console.log(`Listening at http://localhost:${port}!`));
+app.listern(port, () => console.log(`Listening at http://localhost:${port}!`));
 
 
 
