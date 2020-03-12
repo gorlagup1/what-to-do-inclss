@@ -1,5 +1,5 @@
 const express = require('express');
-const gameController  * require('./controllers/game');
+const gameController  = require('./controllers/game');
 
 const app = express();
 const port = 3000;
