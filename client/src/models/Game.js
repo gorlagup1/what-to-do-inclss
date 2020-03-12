@@ -1,30 +1,31 @@
+import { CurrentUser } from "./Users";
+
 export const Players = [
     { Name: 'Bernie', Score: 0, isDealer: false }
 ];
 export const MyCards = [];
-
 export const PictureDeck = [
-   ' Did I make your heart skip a bit?
-May your day be as good as taking a selfie in the first try.
-I know that looks aren’t everything, but I have them just in case.
-Wanna know what else is bigger than my smile? My heart.
-Going to bed early. Not going to a party. Not leaving my house. My childhood punishments have become my adult goals.
-
-This is called a ‘selfie’ because ‘narcissistic’ is too hard to spell.'',
+    'http://www.dumpaday.com/wp-content/uploads/2020/02/00-147-750x280.jpg',
+    'http://www.dumpaday.com/wp-content/uploads/2020/02/00-146-750x280.jpg',
+    'http://www.dumpaday.com/wp-content/uploads/2020/02/00-131-750x280.jpg'
 ];
-export const CaptionDeck = [
-
+export const CaptionsDeck = [
+    'For me, math class is like watching a foreign movie without subtitles.',
+    'Maybe if we tell people the brain is an app, they will start using it.',
+    'When nothing goes right, go left.',
+    'A cop pulled me over and told me “Papers”, so I said “Scissors, I win!” and drove off.',
+    'Mom: Why is everything on the floor? Me: Gravity!',
+    'Sure, I do marathons. On Netflix.',
+    'Did it for the memories – totally worth it!',
 ];
-
 export let CurrentPicture = "";
-
-export let CardsInPlay = [];
+export const CardsInPlay = [];
 
 export function Init(){
-    MyCards.push(CaptionDeck[0])
-    MyCards.push(CaptionDeck[1]);
+    Players.push( { Name: CurrentUser.Name, Score: 0, isDealer: true })
+
+    MyCards.push(CaptionsDeck[0])
+    MyCards.push(CaptionsDeck[1]);
 
     CurrentPicture = PictureDeck[0];
 }
-
-

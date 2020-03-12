@@ -1,7 +1,7 @@
 {
   "name": "html",
   "version": "1.0.0",
-  "description": "![](pavani.jpg)  \r # My name is pavani gorlagunta. I am from India. I did my bachelor’s in computer science and I learned java, c language, programming skills, database, and many other subjects which was very interesting. And now I am currently pursuing masters in suny new paltz. In my leisure time I usually like to watch tv, reading books, playing games, surfing internet. One of the funniest parts about me is that i love travelling a lot. My favourite website is amazon, and Netflix.",
+  "description":  "",
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
