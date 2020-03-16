@@ -32,14 +32,7 @@ export default {
     Init();
 
   },
-  data:()=>({
-    Players,
-    PictureDeck,
-    CurrentPicture
-  }),
-  components: {
-    
-  }
+
 }
 </script>
 
