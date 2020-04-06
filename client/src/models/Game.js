@@ -1,29 +1,40 @@
-import { CurrentUser } from "./Users";
+import {CurrentUser} from"./Users";
+
 
 export const Players = [
     { Name: 'Bernie', Score: 0, isDealer: false }
 ];
-export const MyCards = [];
-export const PictureDeck = [
+export const MyCards=[]; 
+ export const PictureDeck = [
     'http://www.dumpaday.com/wp-content/uploads/2020/02/00-147-750x280.jpg',
     'http://www.dumpaday.com/wp-content/uploads/2020/02/00-146-750x280.jpg',
     'http://www.dumpaday.com/wp-content/uploads/2020/02/00-131-750x280.jpg'
 ];
-export const CaptionsDeck = [
-    'For me, math class is like watching a foreign movie without subtitles.',
-    'Maybe if we tell people the brain is an app, they will start using it.',
-    'When nothing goes right, go left.',
-    'A cop pulled me over and told me “Papers”, so I said “Scissors, I win!” and drove off.',
-    'Mom: Why is everything on the floor? Me: Gravity!',
-    'Sure, I do marathons. On Netflix.',
-    'Did it for the memories – totally worth it!',
-];
-export let CurrentPicture = "";
-export const CardsInPlay = [];
 
-export function Init(){
-    Players.push( { Name: CurrentUser.Name, Score: 0, isDealer: true })
 
+let CurrentPicture = "";
+ const CardsInPlay = [];
+
+ function submitcaption(caption,playerId){
+     const player=Players[playerId];
+     if(player.isDealer)throw Error('Dealer is not allowed to submit a caption')
+     CardsInPlay.push({
+         Text:caption,
+         PlayerId:playerId,
+         Ischosen:false})
+     })
+    }
+    function Join(userId){
+        const user=user.Get(userId);
+    Players.push( { Name: CurrentUser.Name, Score: 0, isDealer: false })
+const mycards=captionsDeck.list.slice(iCurrentCaption, iCurrentCaption +=DEaAL_AMOUNT;
+return {playerId:Players.length -1, mycards}
+    }
+    module.exports={
+        Players,PictureDeck,CurrentPicture,
+        CardInPlay:CardsInPlay,
+        submitCaption, Join
+    }
     MyCards.push(CaptionsDeck[0])
     MyCards.push(CaptionsDeck[1]);
 

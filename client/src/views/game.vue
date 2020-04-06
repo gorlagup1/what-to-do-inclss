@@ -11,13 +11,13 @@
       <div class="card">
       <div class="card-content">
         <ul>
-          <li v-for="player in Players" :key="player.Name">
+          <li v-for="player in Game.Players" :key="player.Name">
             {{player.Name}} {{player.Score}}
           </li>
         </ul>
       </div>
 
-      <img :src="CurrentPicture"  class="card-image"/>
+      <img :src="Game.CurrentPicture"  class="card-image"/>
     </div>
 
   </div>
@@ -29,11 +29,13 @@ import { Players, PictureDeck, CurrentPicture, Init } from "../models/Game";
 export default {
   name: 'Home',
   created(){
-    Init();
-
+   Init();
   },
-
+  data:()=>({
+    Game
+    })
 }
+
 </script>
 
 <style >
