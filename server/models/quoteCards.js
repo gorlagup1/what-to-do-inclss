@@ -8,7 +8,6 @@ const quoteCards =[
     'Did it for the memories – totally worth it!',
 ];
 
-
 function add(text) {
     quoteCards.push(text);
 }
@@ -18,10 +17,6 @@ module.exports = {
     add: add
 }
 
-; 
-
-
-
-
+;
 
 
