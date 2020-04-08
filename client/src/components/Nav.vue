@@ -47,7 +47,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
        <!--Login button here-->
-        <Login></Login>
+        <Login :CurrentUser="CurrentUser"></Login>
       </div>
     </div>
   </div>
@@ -57,6 +57,7 @@
 <script>
 import Login from "./LoginComponent";
 export default {
+  
   data: ()=>({
     isOpen: false
   }),
