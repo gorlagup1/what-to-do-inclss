@@ -56,7 +56,7 @@
 
 <script>
 import Login from "./LoginComponent";
-import * as Users from "../models/Users";
+import Users from "../models/Users";
 
 export default {
   data: ()=>({
