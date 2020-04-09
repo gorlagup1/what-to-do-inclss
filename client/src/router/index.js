@@ -30,6 +30,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach( (to, from, next) => {
+  console.log(Users);
   if( to.meta.isSecret && !Users.CurrentUser) next('/login');
   else next();
 });
