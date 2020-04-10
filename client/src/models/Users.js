@@ -6,9 +6,8 @@ const Users = [
     
 ];
 
- let ob={
- CurrentUser :null,
- Login(email, password) {
+ let CurrentUser = null;
+ function Login(email, password) {
 
     const user = Users.find(x => x.Email == email);
     if(!user) throw Error('User not found');
@@ -16,5 +15,7 @@ const Users = [
 
     return  this.CurrentUser = user;
 }
- };
-export default Users;
+
+export default {
+    CurrentUser, Login
+}

@@ -67,7 +67,7 @@ export default {
     Login
   }
 }
-</script>
+</script> 
 
 <style>
   .is-current {
