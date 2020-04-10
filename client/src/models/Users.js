@@ -6,7 +6,7 @@ const Users = [
     
 ];
 
- let Users = {
+ let ob = {
     CurrentUser:null,
     Login(email,password){
  
@@ -19,4 +19,4 @@ const Users = [
 }
  };
  
-export default Users;
+export default ob;
