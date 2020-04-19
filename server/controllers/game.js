@@ -1,31 +1,22 @@
-/* B"H
-*/
-const express = require('express');
 
-const quoteCards = require('../models/quoteCards');
-const game = require('../models/Game');
-
-const router = express.Router();
-game.SubmitCaption("Corona Sucks",0);
-router
-    .get('/', (req, res) => res.send({ 
-        Players:game.Players,PictureDeck:game.PictureDeck, CurrentPicture:game.CurrentPicture,
-        CardsInPlay:game.CardsInPlay.map(x=>({...x, PlayerId:'unknown'}))
-    }))
-    .post('/join',(req,res)=>res.send(game.Join(req.body.userId)))
-    .get('/quoteCards',(req,res)=>res.send(quoteCards))
-    .post('/quoteCards',(req,res)=>{
-        quoteCards.add(req.body.text);
-        res.send(quoteCards.list[quoteCards.list.length-1]);
-    })
-    
-.post('/cardsInPlay',(req,res)=>{
-    const playerId=req.body.playerId;
-    game.SubmitCaption(req.body.caption, playerId);
-    res.send({success:true})
-})
+const quoteCards =[
+    'For me, math class is like watching a foreign movie without subtitles.',
+    'Maybe if we tell people the brain is an app, they will start using it.',
+    'When nothing goes right, go left.',
+    'A cop pulled me over and told me “Papers”, so I said “Scissors, I win!” and drove off.',
+    'Mom: Why is everything on the floor? Me: Gravity!',
+    'Sure, I do marathons. On Netflix.',
+    'Did it for the memories – totally worth it!',
+];
 
 
+function add(text) {
+    quoteCards.push(text);
+}
 
-  
-    module.exports=router;
+module.exports = {
+    list: quoteCards,
+    add: add
+}
+
+;
