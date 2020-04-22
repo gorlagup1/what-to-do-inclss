@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import Users from "../models/Users";
+import { Login } from "../models/Users";
 export default {
     data(){
         return {
@@ -41,9 +41,9 @@ export default {
         }
     },
     methods: { 
-        login(){
+       async login(){
             try {
-               Users.Login(this.email, this.password);
+              await Login(this.email, this.password);
                 this.$router.push('/game');
             } catch (error) {
                 this.error = error;
