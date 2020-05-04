@@ -46,28 +46,30 @@
 
     <div class="navbar-end">
       <div class="navbar-item">
-        <Login :CurrentUser="Users.CurrentUser"></Login>
-        
-      </div>
+  <div class="buttons">
+    <a class="button is-primary">
+      <strong>Sign up</strong>
+      </a>
+      <a class="button is-light" href="/login">
+      Log in
+      </a>
+        </div>
     </div>
   </div>
-</nav>
-</template>
+  </div>
+  </nav>
+  </template>
+
 
 <script>
-import Login from "./LoginComponent";
-import Users from "../models/Users";
-
 export default {
   data: ()=>({
-    isOpen: false,
-    Users:Users
-  }),
-  components:{
-    Login
-  }
+    isOpen: false
+    
+  })
 }
-</script> 
+</script>
+ 
 
 <style>
   .is-current {
