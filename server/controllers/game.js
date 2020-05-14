@@ -1,9 +1,12 @@
-/* B"H
+* B"H
 */
 const express = require('express');
+
 const quoteCards = require('../models/quoteCards');
 const game = require('../models/Game');
+
 const router = express.Router();
+
 router.use(function(req, res, next) {
     if(req.userId != null ){
         req.playerId = game.GetPlayerId(req.userId)
@@ -11,6 +14,7 @@ router.use(function(req, res, next) {
     console.log({ userId: req.userId, playerId: req.playerId })
     next();
 });
+
 router
     .get('/', (req, res) => { 
         console.log( req.userId );
@@ -21,7 +25,6 @@ router
 
     })
 
-    
     .post('/join', (req, res)=> res.send(game.Join(req.userId)) )
     .post('/flipPicture', (req, res)=> res.send(game.FlipPicture()) )
 
@@ -30,9 +33,12 @@ router
         quoteCards.add(req.body.text);
         res.send(quoteCards.list[quoteCards.list.length - 1]);
     })
+
    .post('/cardsInPlay', (req, res) => {
         game.SubmitCaption(req.body.caption, req.playerId);
         res.send({ success: true })
     })
+
+
 module.exports = router;
 
