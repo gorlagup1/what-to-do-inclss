@@ -46,30 +46,27 @@
 
     <div class="navbar-end">
       <div class="navbar-item">
-  <div class="buttons">
-    <a class="button is-primary">
-      <strong>Sign up</strong>
-      </a>
-      <a class="button is-light" href="/login">
-      Log in
-      </a>
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/login">
+            Log in
+          </a>
         </div>
+      </div>
     </div>
   </div>
-  </div>
-  </nav>
-  </template>
-
+</nav>
+</template>
 
 <script>
 export default {
   data: ()=>({
     isOpen: false
-    
   })
 }
 </script>
- 
 
 <style>
   .is-current {

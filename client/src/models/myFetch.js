@@ -7,8 +7,6 @@ const api_root = "http://localhost:3000";
 export default async function myFetch(url, data){
 
     let response;
-    
-
     const headers = {};
     if(CurrentUser && CurrentUser.userId != null){
         headers.authorization = "bearer " + CurrentUser.userId
@@ -18,7 +16,6 @@ export default async function myFetch(url, data){
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             headers: {
-               
                 ...headers,
                 'Content-Type': 'application/json'
             },
@@ -26,7 +23,6 @@ export default async function myFetch(url, data){
         });
     }else{
         response = await fetch(api_root + url, { 
-            
             headers
          });
     }

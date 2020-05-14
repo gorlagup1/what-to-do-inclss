@@ -1,25 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import MyNav from "./components/Nav";
+import Login from "./views/Login";
+
+const About = ()=> <h1 className="title is-1">About Page</h1>
+const Game = ()=> <h1 className="title is-1">Game Page</h1>
+const Home = ()=> <h1 className="title is-1">Home Page</h1>
+const NotFound = ()=> <h1 className="title is-1">404 - Sorry. Not Sorry. Watch where you are going!</h1>
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <MyNav />
+        
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/game">
+            <Game />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+
+      </div>
+    </Router>
   );
 }
 
